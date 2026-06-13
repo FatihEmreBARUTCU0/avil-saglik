@@ -1,3 +1,5 @@
+import { site } from "../config/site";
+
 type LogoProps = {
   size?: "sm" | "md" | "lg";
   showText?: boolean;
@@ -32,7 +34,7 @@ export default function Logo({
           aria-hidden
         >
           <path
-            d="M24 8 L14 38 L20 38 L22 30 L26 30 L28 38 L34 38 Z"
+            d="M16 10 L16 38 L20 38 L20 26 L28 26 L28 38 L32 38 L32 10 L28 10 L28 22 L20 22 L20 10 Z"
             fill="currentColor"
             className="text-light"
           />
@@ -50,12 +52,12 @@ export default function Logo({
           <p
             className={`font-body font-light tracking-[0.35em] ${s.avil} ${textColor}`}
           >
-            AVİL
+            {site.logoShort}
           </p>
           <p
             className={`mt-0.5 font-body font-medium tracking-[0.25em] ${s.sub} ${subColor}`}
           >
-            SAĞLIK BAKIM
+            {site.logoSub}
           </p>
         </div>
       )}

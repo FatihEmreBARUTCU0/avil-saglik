@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { site } from "../config/site";
 import Logo from "./Logo";
 
 const highlights = [
@@ -52,19 +53,17 @@ export default function Hero() {
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="text-center lg:text-left">
           <h1 className="font-heading text-4xl font-semibold leading-tight tracking-wide text-light sm:text-5xl lg:text-6xl">
-            AVİL SAĞLIK BAKIM
+            {site.nameUpper}
           </h1>
 
           <p className="mx-auto mt-4 text-lg font-light tracking-wide text-gold sm:text-xl lg:mx-0">
-            Silivri Evde Sağlık Hizmetleri
+            {site.slogan}
           </p>
 
           <div className="mx-auto mt-6 h-px w-16 bg-gold/60 lg:mx-0" />
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-light/70 lg:mx-0 lg:text-lg">
-            Avil Sağlık Bakım olarak Silivri ve çevresinde serum, enjeksiyon,
-            pansuman ve atom serum uygulamalarını evinizin konforunda,
-            profesyonel ekibimizle sunuyoruz.
+            {site.description}
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">

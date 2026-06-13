@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant, Montserrat } from "next/font/google";
+import { site } from "./config/site";
 import "./globals.css";
 
 const cormorant = Cormorant({
@@ -15,12 +16,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Avil Sağlık Bakım | Silivri Evde Sağlık Hizmetleri",
-  description: "Avil Sağlık Bakım | Silivri Evde Sağlık Hizmetleri",
+  title: site.metaTitle,
+  description: site.metaDescription,
   openGraph: {
-    title: "Avil Sağlık Bakım | Silivri Evde Sağlık",
-    description:
-      "Silivri'de profesyonel evde sağlık hizmetleri. Serum, enjeksiyon, pansuman ve daha fazlası.",
+    title: site.ogTitle,
+    description: site.ogDescription,
     images: ["/og-image.png"],
     locale: "tr_TR",
     type: "website",

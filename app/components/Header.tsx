@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { site } from "../config/site";
 import Logo from "./Logo";
 
 const navLinks = [
@@ -20,15 +21,15 @@ export default function Header() {
         <a
           href="#anasayfa"
           className="flex items-center gap-3"
-          aria-label="Anasayfaya dön - Avil Sağlık Bakım"
+          aria-label={`Anasayfaya dön - ${site.name}`}
         >
           <Logo size="sm" showText={false} />
           <div className="hidden sm:block">
             <p className="font-body text-sm font-light tracking-[0.2em] text-light">
-              AVİL
+              {site.logoShort}
             </p>
             <p className="text-[0.6rem] font-medium tracking-[0.15em] text-light/50">
-              SAĞLIK BAKIM
+              {site.logoSub}
             </p>
           </div>
         </a>

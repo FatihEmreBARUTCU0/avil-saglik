@@ -1,3 +1,5 @@
+import { site } from "../config/site";
+
 const teamValues = [
   {
     title: "Deneyimli Personel",
@@ -24,9 +26,9 @@ export default function Team() {
               Profesyonel Sağlık Ekibimiz
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/65 sm:text-base">
-              Avil Sağlık Bakım ekibi, evde sağlık hizmetlerinde yılların
-              deneyimini bir araya getiriyor. Serum tedavilerinden pansuman
-              uygulamalarına kadar tüm süreçlerde yanınızdayız.
+              {site.name} ekibi, evde sağlık hizmetlerinde yılların deneyimini
+              bir araya getiriyor. Serum tedavilerinden pansuman uygulamalarına
+              kadar tüm süreçlerde yanınızdayız.
             </p>
 
             <div className="mt-8 space-y-5">
