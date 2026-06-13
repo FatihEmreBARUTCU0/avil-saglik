@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Logo from "./Logo";
 
 const highlights = [
@@ -33,14 +34,16 @@ export default function Hero() {
       id="anasayfa"
       className="relative overflow-hidden px-4 pt-28 pb-20 sm:px-6 lg:pt-32 lg:pb-28"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=1920&q=80')",
-        }}
-        aria-hidden
-      />
+      <div className="absolute inset-0" aria-hidden>
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
       <div
         className="pointer-events-none absolute inset-0 bg-[#0D1B2A]/75"
         aria-hidden

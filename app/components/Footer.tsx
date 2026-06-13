@@ -13,13 +13,19 @@ export default function Footer() {
     <footer className="border-t border-gold/15 bg-navy px-4 py-12 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
-          <Logo size="sm" />
+          <a href="#anasayfa" aria-label="Anasayfaya dön - Avil Sağlık Bakım">
+            <Logo size="sm" />
+          </a>
 
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <nav
+            className="flex flex-wrap justify-center gap-x-6 gap-y-2"
+            aria-label="Alt bilgi navigasyonu"
+          >
             {footerLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
+                aria-label={`${link.label} bölümüne git`}
                 className="text-xs font-medium uppercase tracking-wider text-light/50 transition-colors hover:text-gold"
               >
                 {link.label}
@@ -31,6 +37,7 @@ export default function Footer() {
             href="https://instagram.com/avilsaglikbakim"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram profilimizi ziyaret et (@avilsaglikbakim)"
             className="flex items-center gap-2 text-xs font-medium text-light/50 transition-colors hover:text-gold"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

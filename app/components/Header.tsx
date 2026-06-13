@@ -17,7 +17,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-gold/20 bg-navy/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="#anasayfa" className="flex items-center gap-3">
+        <a
+          href="#anasayfa"
+          className="flex items-center gap-3"
+          aria-label="Anasayfaya dön - Avil Sağlık Bakım"
+        >
           <Logo size="sm" showText={false} />
           <div className="hidden sm:block">
             <p className="font-body text-sm font-light tracking-[0.2em] text-light">
@@ -29,11 +33,15 @@ export default function Header() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav
+          className="hidden items-center gap-7 lg:flex"
+          aria-label="Ana navigasyon"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
+              aria-label={`${link.label} bölümüne git`}
               className="text-xs font-medium uppercase tracking-wider text-light/70 transition-colors hover:text-gold"
             >
               {link.label}
@@ -41,6 +49,7 @@ export default function Header() {
           ))}
           <a
             href="#iletisim"
+            aria-label="Randevu al - İletişim bölümüne git"
             className="border border-gold px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:bg-gold hover:text-navy"
           >
             Randevu
@@ -79,12 +88,16 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="border-t border-gold/20 bg-navy px-4 py-4 lg:hidden">
+        <nav
+          className="border-t border-gold/20 bg-navy px-4 py-4 lg:hidden"
+          aria-label="Mobil navigasyon"
+        >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
+                  aria-label={`${link.label} bölümüne git`}
                   className="block py-2.5 text-sm font-medium text-light/80 transition-colors hover:text-gold"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -95,6 +108,7 @@ export default function Header() {
             <li className="pt-2">
               <a
                 href="#iletisim"
+                aria-label="Randevu al - İletişim bölümüne git"
                 className="block border border-gold py-2.5 text-center text-sm font-semibold text-gold"
                 onClick={() => setMenuOpen(false)}
               >
